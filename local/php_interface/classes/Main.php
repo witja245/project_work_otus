@@ -32,7 +32,7 @@ class Main
             false,
             array("*")
         );
-//C1:LOSE C1:APOLOGY C1:WON
+
         $deals = array();
         while ($arDeal = $dbDeal->fetch()) {
 
@@ -57,7 +57,11 @@ class Main
         return $deals;
     }
 
-
+    /**
+     * получение кол-во сделок по фильтру
+     * @param $filter
+     * @return int
+     */
     public static function getCountDeals($filter)
     {
 
@@ -68,7 +72,7 @@ class Main
             false,
             array("*")
         );
-//C1:LOSE C1:APOLOGY C1:WON
+
         $deals = array();
         while ($arDeal = $dbDeal->fetch()) {
 
