@@ -20,7 +20,7 @@ function agentRandomCountProducts()
         if ($countProducts == 0){
             $iblockId = Main::getIblockIdByCode('bizproccess');
             $PROP = array();
-            $PROP['DETALI_DLYA_ZAKUPKI'] = $product['NAME'];  // свойству с кодом 12 присваиваем значение "Белый"
+            $PROP['DETALI_DLYA_ZAKUPKI'] = $product['NAME'];
             $PROP['KOLICHESTVO_DETALEY'] = 10;
             $arFields = [
                 "IBLOCK_ID" => $iblockId,
@@ -29,7 +29,9 @@ function agentRandomCountProducts()
                 "KOLICHESTVO_DETALEY" => $iblockId,
             ];
             $elementId =  Main::addIblockIdElement($arFields);
-            $res = Main::startBP(17, [
+
+            
+            Main::startBP(17, [
                 "lists", "BizprocDocument", $elementId
             ]);
         }
