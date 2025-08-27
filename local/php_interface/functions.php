@@ -22,7 +22,7 @@ function randomCount()
             throw new Exception("Полученные данные не являются числом");
         }
 
-        return $random_number;
+        return (int)$random_number;
 
     } catch (Exception $e) {
         return "Произошла ошибка: " . $e->getMessage();
