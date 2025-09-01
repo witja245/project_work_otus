@@ -30,9 +30,11 @@ function agentRandomCountProducts()
             ];
             $elementId =  Main::addIblockIdElement($arFields);
 
-            
+
             Main::startBP(17, [
                 "lists", "BizprocDocument", $elementId
+            ], [
+                "purchase_without_approval" =>'да'
             ]);
         }
         if($countProducts > 0){
